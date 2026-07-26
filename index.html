@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UEC & Chofu Survival Guide</title>
     <meta name="description" content="A comprehensive survival map and guide for new international students at UEC, Tokyo.">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
@@ -14,9 +15,11 @@
       <div class="logo">UEC<span class="text-gradient">Guide</span></div>
       <ul class="nav-links">
         <li><a href="#day-one">Day One</a></li>
+        <li><a href="#interactive-map">Map</a></li>
         <li><a href="#food">Food</a></li>
         <li><a href="#living">Living</a></li>
         <li><a href="#emergency">Emergency</a></li>
+
       </ul>
     </nav>
 
@@ -74,15 +77,15 @@
 
       <div class="gallery">
         <div class="gallery-item" data-src="assets/images/day-one/campus-map.png" data-caption="UEC Campus Map — navigate buildings and facilities">
-          <img src="assets/images/day-one/campus-map.png" alt="UEC Campus Map" loading="lazy">
+          <img src="public/assets/images/day-one/campus-map.png" alt="UEC Campus Map" loading="lazy">
           <div class="gallery-label">Campus Map</div>
         </div>
         <div class="gallery-item" data-src="assets/images/day-one/international-house-lobby.jpg" data-caption="International House Lobby — common area with free items for students">
-          <img src="assets/images/day-one/international-house-lobby.jpg" alt="International House Lobby" loading="lazy">
+          <img src="public/assets/images/day-one/international-house-lobby.jpg" alt="International House Lobby" loading="lazy">
           <div class="gallery-label">IH Lobby</div>
         </div>
         <div class="gallery-item" data-src="assets/images/day-one/international-dorm.jpg" data-caption="International Dorm — shared lobby with free stuff to take">
-          <img src="assets/images/day-one/international-dorm.jpg" alt="International Dorm" loading="lazy">
+          <img src="public/assets/images/day-one/international-dorm.jpg" alt="International Dorm" loading="lazy">
           <div class="gallery-label">International Dorm</div>
         </div>
       </div>
@@ -90,18 +93,39 @@
       <div class="pdf-links">
         <h3>Reference Documents</h3>
         <div class="pdf-list">
-          <a href="assets/pdfs/Network use policy and UEC edu account 2025.pdf" target="_blank" class="pdf-link">
+          <a href="public/assets/pdfs/Network use policy and UEC edu account 2025.pdf" target="_blank" class="pdf-link">
             <span class="pdf-icon">📄</span> Network Policy & UEC Account 2025
           </a>
-          <a href="assets/pdfs/Network System Howto overview.pdf" target="_blank" class="pdf-link">
+          <a href="public/assets/pdfs/Network System Howto overview.pdf" target="_blank" class="pdf-link">
             <span class="pdf-icon">📄</span> Network Setup Guide
           </a>
-          <a href="assets/pdfs/UEC Network Policy.pdf" target="_blank" class="pdf-link">
+          <a href="public/assets/pdfs/UEC Network Policy.pdf" target="_blank" class="pdf-link">
             <span class="pdf-icon">📄</span> UEC Network Policy
           </a>
         </div>
       </div>
     </section>
+
+
+    <section id="interactive-map">
+      <div class="section-header">
+        <h2>Campus & Chofu <span class="text-gradient">Map</span></h2>
+        <p>Find essential places, from cheap food to important UEC buildings and City Hall.</p>
+      </div>
+
+      <div class="map-filters">
+        <button class="btn-filter active" data-filter="all">All</button>
+        <button class="btn-filter" data-filter="campus">UEC Campus</button>
+        <button class="btn-filter" data-filter="food">Food & Groceries</button>
+        <button class="btn-filter" data-filter="living">Living & Admin</button>
+        <button class="btn-filter" data-filter="entertainment">Entertainment</button>
+      </div>
+
+      <div class="glass-panel map-container">
+        <div id="map-render" style="height: 600px; width: 100%; border-radius: 12px; z-index: 1;"></div>
+      </div>
+    </section>
+
 
     <section id="food">
       <div class="section-header">
@@ -134,15 +158,15 @@
 
       <div class="gallery">
         <div class="gallery-item" data-src="assets/images/food/campus-cafeteria.jpg" data-caption="UEC Campus Cafeteria Entrance — where you can get the 100-yen breakfast">
-          <img src="assets/images/food/campus-cafeteria.jpg" alt="Campus Cafeteria" loading="lazy">
+          <img src="public/assets/images/food/campus-cafeteria.jpg" alt="Campus Cafeteria" loading="lazy">
           <div class="gallery-label">Campus Cafeteria</div>
         </div>
         <div class="gallery-item" data-src="assets/images/food/building-29.jpg" data-caption="Building 29 — houses additional dining options on campus">
-          <img src="assets/images/food/building-29.jpg" alt="Building 29" loading="lazy">
+          <img src="public/assets/images/food/building-29.jpg" alt="Building 29" loading="lazy">
           <div class="gallery-label">Building 29</div>
         </div>
         <div class="gallery-item" data-src="assets/images/food/restaurants-chofu.jpg" data-caption="Restaurants in Chofu — explore local dining near campus">
-          <img src="assets/images/food/restaurants-chofu.jpg" alt="Restaurants in Chofu" loading="lazy">
+          <img src="public/assets/images/food/restaurants-chofu.jpg" alt="Restaurants in Chofu" loading="lazy">
           <div class="gallery-label">Chofu Restaurants</div>
         </div>
       </div>
@@ -150,7 +174,7 @@
       <div class="pdf-links">
         <h3>Reference Documents</h3>
         <div class="pdf-list">
-          <a href="assets/pdfs/Food Labelling.pdf" target="_blank" class="pdf-link">
+          <a href="public/assets/pdfs/Food Labelling.pdf" target="_blank" class="pdf-link">
             <span class="pdf-icon">📄</span> Food Labelling Guide
           </a>
         </div>
@@ -188,39 +212,39 @@
 
       <div class="gallery">
         <div class="gallery-item" data-src="assets/images/living/chofu-station.jpg" data-caption="Chofu Station — the main transit hub">
-          <img src="assets/images/living/chofu-station.jpg" alt="Chofu Station" loading="lazy">
+          <img src="public/assets/images/living/chofu-station.jpg" alt="Chofu Station" loading="lazy">
           <div class="gallery-label">Chofu Station</div>
         </div>
         <div class="gallery-item" data-src="assets/images/living/parco-chofu.jpg" data-caption="PARCO Chofu — shopping mall with Daiso, Kaldi, and more">
-          <img src="assets/images/living/parco-chofu.jpg" alt="PARCO Chofu" loading="lazy">
+          <img src="public/assets/images/living/parco-chofu.jpg" alt="PARCO Chofu" loading="lazy">
           <div class="gallery-label">PARCO Chofu</div>
         </div>
         <div class="gallery-item" data-src="assets/images/living/seiyu-donqui.jpg" data-caption="Seiyu & Don Quijote — 24-hour shopping">
-          <img src="assets/images/living/seiyu-donqui.jpg" alt="Seiyu and Don Quijote" loading="lazy">
+          <img src="public/assets/images/living/seiyu-donqui.jpg" alt="Seiyu and Don Quijote" loading="lazy">
           <div class="gallery-label">Seiyu / Don Quijote</div>
         </div>
         <div class="gallery-item" data-src="assets/images/living/seiyu-donqui-2.jpg" data-caption="Seiyu & Don Quijote — another view">
-          <img src="assets/images/living/seiyu-donqui-2.jpg" alt="Seiyu and Don Quijote 2" loading="lazy">
+          <img src="public/assets/images/living/seiyu-donqui-2.jpg" alt="Seiyu and Don Quijote 2" loading="lazy">
           <div class="gallery-label">Seiyu / Don Quijote 2</div>
         </div>
         <div class="gallery-item" data-src="assets/images/living/7-11-ih.jpg" data-caption="7-Eleven near International House — convenience store">
-          <img src="assets/images/living/7-11-ih.jpg" alt="7-Eleven near IH" loading="lazy">
+          <img src="public/assets/images/living/7-11-ih.jpg" alt="7-Eleven near IH" loading="lazy">
           <div class="gallery-label">7-Eleven (IH)</div>
         </div>
         <div class="gallery-item" data-src="assets/images/living/gigo.jpg" data-caption="GIGO — secondhand/retro game store in Chofu">
-          <img src="assets/images/living/gigo.jpg" alt="GIGO" loading="lazy">
+          <img src="public/assets/images/living/gigo.jpg" alt="GIGO" loading="lazy">
           <div class="gallery-label">GIGO</div>
         </div>
         <div class="gallery-item" data-src="assets/images/living/ok-super.jpg" data-caption="OK Supermarket — budget grocery shopping">
-          <img src="assets/images/living/ok-super.jpg" alt="OK Supermarket" loading="lazy">
+          <img src="public/assets/images/living/ok-super.jpg" alt="OK Supermarket" loading="lazy">
           <div class="gallery-label">OK Super</div>
         </div>
         <div class="gallery-item" data-src="assets/images/living/ih-trash-1.jpg" data-caption="International House trash area — proper disposal guide">
-          <img src="assets/images/living/ih-trash-1.jpg" alt="IH Trash area 1" loading="lazy">
+          <img src="public/assets/images/living/ih-trash-1.jpg" alt="IH Trash area 1" loading="lazy">
           <div class="gallery-label">IH Trash Area</div>
         </div>
         <div class="gallery-item" data-src="assets/images/living/ih-trash-2.jpg" data-caption="International House trash area — recycling bins">
-          <img src="assets/images/living/ih-trash-2.jpg" alt="IH Trash area 2" loading="lazy">
+          <img src="public/assets/images/living/ih-trash-2.jpg" alt="IH Trash area 2" loading="lazy">
           <div class="gallery-label">IH Recycling</div>
         </div>
       </div>
@@ -228,7 +252,7 @@
       <div class="pdf-links">
         <h3>Reference Documents</h3>
         <div class="pdf-list">
-          <a href="assets/pdfs/Garbage Disposal Rules.pdf" target="_blank" class="pdf-link">
+          <a href="public/assets/pdfs/Garbage Disposal Rules.pdf" target="_blank" class="pdf-link">
             <span class="pdf-icon">📄</span> Garbage Disposal Rules
           </a>
         </div>
@@ -263,15 +287,24 @@
       <div class="pdf-links">
         <h3>Reference Documents</h3>
         <div class="pdf-list">
-          <a href="assets/pdfs/Medical Institutions Listed by the Tokyo Metropolitan Government.pdf" target="_blank" class="pdf-link">
+          <a href="public/assets/pdfs/Medical Institutions Listed by the Tokyo Metropolitan Government.pdf" target="_blank" class="pdf-link">
             <span class="pdf-icon">📄</span> Medical Institutions (Tokyo Gov)
           </a>
-          <a href="assets/pdfs/kyoten0512_2.pdf" target="_blank" class="pdf-link">
+          <a href="public/assets/pdfs/kyoten0512_2.pdf" target="_blank" class="pdf-link">
             <span class="pdf-icon">📄</span> Emergency Base Guide
           </a>
         </div>
       </div>
     </section>
+
+    <div id="map-modal" class="map-modal">
+      <div class="glass-panel map-modal-content">
+        <span class="lightbox-close map-close">&times;</span>
+        <img id="modal-img" src="" alt="Location image">
+        <h3 id="modal-title">Title</h3>
+        <p id="modal-desc">Detailed description...</p>
+      </div>
+    </div>
 
     <footer>
       <p>Designed for the UEC International Student Community</p>
@@ -285,6 +318,9 @@
       </div>
     </div>
 
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script type="module" src="/main.js"></script>
+
   </body>
 </html>

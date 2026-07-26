@@ -1,3 +1,7 @@
+import { initMap } from './map.js';
+
+initMap();
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -7,6 +11,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
 
 const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
 
