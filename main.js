@@ -35,6 +35,7 @@ document.querySelectorAll('.glass-panel, .gallery-item, .pdf-link').forEach(el =
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const lightboxCaption = document.getElementById('lightbox-caption');
+const lightboxMapLink = document.getElementById('lightbox-map-link');
 
 document.querySelectorAll('.gallery-item').forEach(item => {
   item.addEventListener('click', function () {
@@ -42,6 +43,7 @@ document.querySelectorAll('.gallery-item').forEach(item => {
     const caption = this.dataset.caption;
     lightboxImg.src = src;
     lightboxCaption.textContent = caption;
+    lightboxMapLink.hidden = !this.querySelector('img[alt="UEC Campus Map"]');
     lightbox.classList.add('active');
     document.body.style.overflow = 'hidden';
   });

@@ -269,6 +269,17 @@ section {
   box-shadow: 0 6px 20px rgba(255,140,66,0.4);
 }
 
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.card-actions .btn {
+  padding: 0.7rem 1.25rem;
+}
+
 /* Gallery */
 .gallery {
   display: grid;
@@ -343,6 +354,10 @@ section {
   color: #ccc;
   margin-top: 1rem;
   font-size: 1rem;
+}
+
+.lightbox-action {
+  margin-top: 0.5rem;
 }
 
 .lightbox-close {
@@ -520,5 +535,10 @@ footer {
   }
   .lightbox {
     padding: 1rem;
+  }
+  .card-actions .btn,
+  .lightbox-action {
+    width: 100%;
+    text-align: center;
   }
 }
