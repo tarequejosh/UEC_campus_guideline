@@ -1,65 +1,27 @@
-# UEC Campus & Chofu International Student Guide
+# UEC International Student Guide
 
-A comprehensive student-friendly guide for new international students at the **University of Electro-Communications (UEC)**, Chofu, Tokyo. Covers day-one essentials, food, local living tips, interactive map, and emergency guidance.
+A practical guide for international students at the **University of Electro-Communications (UEC)**, Chofu, Tokyo — covering day-one essentials, food, living tips, campus life, and emergencies.
 
-## Live Demo
-
-| Platform | URL |
-|----------|-----|
-| **GitHub Pages** | https://tarequejosh.github.io/UEC_campus_guideline/ |
+**Live:** https://tarequejosh.github.io/UEC_campus_guideline/
 
 ## Pages
 
-- **Home** (`index.html`) — Before arrival checklist, first week guide, quick links
-- **Living in Chofu** (`living.html`) — Transport, supermarkets, interactive Leaflet map, garbage rules, internet
-- **Campus Life** (`campus-life.html`) — Food & dining, facilities, health center, clubs, career
-- **Emergency** (`emergency.html`) — Emergency numbers, earthquake/typhoon safety, clinics, embassy contacts, Japanese phrases
+| Page | Content |
+|------|---------|
+| Home | Before arrival, first-week checklist, quick links |
+| Living | Transport, supermarkets, map, garbage rules, internet |
+| Campus | Food & dining, facilities, clubs, career |
+| Emergency | Numbers, earthquake/typhoon safety, clinics, phrases |
 
-## Tech Stack
+## Tech
 
-- **Build:** Vite 8 (multi-page setup)
-- **CSS:** Custom design tokens (cool-neutral palette, UEC blue accent, WCAG AA/AAA)
-- **JS:** Vanilla ES modules with dynamic imports
-- **Map:** Leaflet via CDN with 15 POI markers
-- **Fonts:** Inter (Google Fonts)
-- **Runtime:** No frameworks — pure HTML/CSS/JS
-
-## Performance
-
-- All images compressed and resized (WebP, max 1600px)
-- Dynamic code splitting (`map.js` loaded only on living.html)
-- RAF-backed scroll handlers, idle-time initialization
-- `content-visibility: auto` for offscreen sections
+Vite 8 · Vanilla HTML/CSS/JS · Leaflet map · Inter font
 
 ## Development
 
 ```bash
 npm install
-npm run dev
+npm run dev     # dev server
+npm run build   # outputs to dist/
+npm run deploy  # publishes to GitHub Pages
 ```
-
-## Build
-
-```bash
-npm run build    # outputs to dist/
-```
-
-## Deployment
-
-### GitHub Pages (current)
-
-```bash
-npm run build
-npx gh-pages -d dist
-```
-
-The site is auto-deployed from the `gh-pages` branch.
-
-### Manual
-
-Upload the `dist/` folder to any static host (Netlify, Vercel, etc.).
-
-## Branch Strategy
-
-- **`main`** — production branch
-- **`redesign-overhaul`** — current active development (UI redesign, performance optimization)
