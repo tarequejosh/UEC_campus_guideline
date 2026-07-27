@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emergency Guide — UEC Survival Guide</title>
+  <meta name="description" content="Emergency information for UEC international students: ambulance, police, earthquake safety, English-speaking clinics, embassy contacts, and emergency phrases in Japanese." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="./" class="nav-logo">UEC<span class="logo-accent">Guide</span></a>
+      <ul class="nav-links">
+        <li><a href="./" class="nav-link">Home</a></li>
+        <li><a href="living.html" class="nav-link">Living</a></li>
+        <li><a href="campus-life.html" class="nav-link">Campus</a></li>
+        <li><a href="emergency.html" class="nav-link active">Emergency</a></li>
+        <li>
+          <button class="nav-icon-btn" id="searchToggle" aria-label="Search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="nav-icon-btn" id="darkToggle" aria-label="Toggle dark mode">
+            <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </li>
+      </ul>
+      <button class="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div id="searchOverlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="Search guides">
+    <div class="search-container">
+      <input type="search" id="searchInput" class="search-input" placeholder="Search guides, locations, numbers..." autocomplete="off" />
+      <div id="searchResults" class="search-results" role="listbox"></div>
+      <p class="search-hint">Press <kbd>Esc</kbd> to close</p>
+    </div>
+  </div>
+
+  <button id="emergencyFab" class="emergency-fab" aria-label="Emergency numbers">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81"/></svg>
+  </button>
+  <div id="emergencyPanel" class="emergency-panel" hidden>
+    <a href="tel:119" class="emergency-panel-item emergency-call">
+      <span class="ep-number">119</span>
+      <span class="ep-label">Ambulance / Fire</span>
+    </a>
+    <a href="tel:110" class="emergency-panel-item emergency-call">
+      <span class="ep-number">110</span>
+      <span class="ep-label">Police</span>
+    </a>
+    <a href="emergency.html" class="emergency-panel-item">
+      <span class="ep-label">Full Emergency Guide &rarr;</span>
+    </a>
+  </div>
+
+  <main id="main-content">
+    <header class="page-hero page-hero-emergency">
+      <div class="page-hero-content">
+        <span class="section-tag" style="background:var(--red-light);color:var(--red)">Emergency</span>
+        <h1>Emergency Guide</h1>
+        <p>Essential numbers, disaster preparedness, and medical information for UEC international students.</p>
+        <div class="emergency-numbers-bar">
+          <a href="tel:119" class="emergency-number-card">
+            <span class="enc-number">119</span>
+            <span class="enc-label">Ambulance / Fire</span>
+          </a>
+          <a href="tel:110" class="emergency-number-card">
+            <span class="enc-number">110</span>
+            <span class="enc-label">Police</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Medical -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-tag">Medical</span>
+        <h2>Health Care &amp; Clinics</h2>
+        <p>Where to get medical help in and around UEC.</p>
+      </div>
+
+      <div class="emergency-card card-medical">
+        <div class="card-header">
+          <div class="card-header-icon medical-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <div>
+            <span class="card-label">On-Campus</span>
+            <h3>UEC Health Care Center</h3>
+          </div>
+        </div>
+        <p>UEC students can visit the Health Care Center for health consultations and medical advice. English-speaking staff are available.</p>
+        <div class="info-grid">
+          <div class="info-item">
+            <span class="info-label">Hours</span>
+            <strong>Mon&ndash;Fri</strong>
+            <span>9:00&ndash;13:00 / 14:00&ndash;17:00</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">What to bring</span>
+            <strong>Student ID</strong>
+            <span>Some services require a reservation</span>
+          </div>
+        </div>
+        <div class="info-note">
+          Check the official website before visiting as schedules may change.
+        </div>
+        <a href="https://www.health.uec.ac.jp/eng/index.html" target="_blank" rel="noopener noreferrer" class="text-link">Visit UEC Health Care Center &rarr;</a>
+      </div>
+
+      <div class="section-subheader">
+        <h3>English-Speaking Clinics</h3>
+        <p>Medical institutions near UEC that offer English support.</p>
+      </div>
+
+      <div class="clinic-list">
+        <div class="clinic-item">
+          <div class="clinic-header">
+            <h5>Sengawa Orthopedics</h5>
+            <span class="clinic-tag">Orthopedics</span>
+          </div>
+          <p class="clinic-address">Wisteria Sengawa 1F-A, 3-2-4 Sengawacho, Chofu, Tokyo</p>
+          <a href="tel:0333050088" class="clinic-phone">03-3305-0088</a>
+        </div>
+        <div class="clinic-item">
+          <div class="clinic-header">
+            <h5>Sengawa ENT</h5>
+            <span class="clinic-tag">Ear, Nose and Throat</span>
+          </div>
+          <p class="clinic-address">Negishi Building 2F, 1-12-46 Sengawacho, Chofu, Tokyo</p>
+          <a href="tel:0353133281" class="clinic-phone">03-5313-3281</a>
+        </div>
+      </div>
+
+      <div class="warning-block" style="margin-top:1rem">
+        <strong>Important:</strong> English-speaking doctors may not always be available. Contact the clinic before visiting to confirm English support.
+      </div>
+    </section>
+
+    <!-- Disaster -->
+    <section class="section section-alt">
+      <div class="section-header">
+        <span class="section-tag">Preparedness</span>
+        <h2>Earthquake Safety</h2>
+        <p>Earthquakes are common in Japan. Know what to do before, during, and after.</p>
+      </div>
+
+      <div class="emergency-card card-disaster">
+        <!-- Drop Cover Hold -->
+        <div class="action-box">
+          <p class="action-title">When the ground starts shaking:</p>
+          <div class="action-steps">
+            <div class="action-step">
+              <span>1</span>
+              <strong>Drop</strong>
+              <p>Get low to the ground.</p>
+            </div>
+            <div class="action-step">
+              <span>2</span>
+              <strong>Cover</strong>
+              <p>Protect your head and neck.</p>
+            </div>
+            <div class="action-step">
+              <span>3</span>
+              <strong>Hold On</strong>
+              <p>Stay under a strong desk.</p>
+            </div>
+          </div>
+        </div>
+
+        <details class="accordion" open>
+          <summary>What to do during an earthquake</summary>
+          <div class="accordion-body">
+            <ul class="safety-list">
+              <li>Stay away from windows, shelves, lights, and furniture that may fall.</li>
+              <li>Do not rush outside while the ground is shaking.</li>
+              <li>Do not try to turn off fire during strong shaking.</li>
+              <li>If possible, open the door to secure an exit.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="accordion">
+          <summary>After the shaking stops</summary>
+          <div class="accordion-body">
+            <ul class="safety-list">
+              <li>Check for injuries, fires, gas smells, and building damage.</li>
+              <li>Get information from UEC, Chofu City, television, or your phone.</li>
+              <li>Do not use elevators. Use the stairs when evacuating.</li>
+              <li>If the building is safe, remain there and follow instructions from UEC or dormitory staff.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="accordion">
+          <summary>Emergency phone alerts</summary>
+          <div class="accordion-body">
+            <div class="alert-card">
+              <h4>Earthquake Early Warning</h4>
+              <p>Strong shaking may arrive within only a few seconds. Immediately protect yourself instead of reading all the details.</p>
+            </div>
+            <div class="alert-levels">
+              <div class="alert-level level-3">
+                <strong>Level 3</strong>
+                <p>People who need more time should begin evacuating.</p>
+              </div>
+              <div class="alert-level level-4">
+                <strong>Level 4</strong>
+                <p>Everyone in a dangerous area should evacuate.</p>
+              </div>
+              <div class="alert-level level-5">
+                <strong>Level 5</strong>
+                <p>Take immediate action to protect your life.</p>
+              </div>
+            </div>
+            <p class="alert-urgent">Do not wait for Alert Level 5. Evacuate by Alert Level 4.</p>
+          </div>
+        </details>
+
+        <details class="accordion">
+          <summary>Evacuation areas near UEC</summary>
+          <div class="accordion-body">
+            <div class="evacuation-item">
+              <span>&#x1F4CD;</span>
+              <div>
+                <strong>East Campus</strong>
+                <p>The open area and rotary north of the main gate</p>
+              </div>
+            </div>
+            <div class="evacuation-item">
+              <span>&#x1F4CD;</span>
+              <div>
+                <strong>West Campus</strong>
+                <p>The area near the tennis courts</p>
+              </div>
+            </div>
+            <div class="evacuation-item evacuation-shelter">
+              <span>&#x1F3EB;</span>
+              <div>
+                <strong>Chofu Municipal Daiichi Elementary School</strong>
+                <p>1-8-1 Kojimacho, Chofu, Tokyo</p>
+                <small>Use only when the dormitory cannot be used safely.</small>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <div class="flow-section">
+          <h4>Basic Evacuation Procedure</h4>
+          <div class="flow-steps">
+            <div class="flow-step"><span>1</span><p>Protect yourself</p></div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="flow-step"><span>2</span><p>Check UEC instructions</p></div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="flow-step"><span>3</span><p>Move to campus</p></div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="flow-step"><span>4</span><p>Use opened shelter</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-subheader" style="margin-top:3rem">
+        <h3>Typhoon Safety</h3>
+        <p>Typhoon season runs June&ndash;October. Stay indoors during storms.</p>
+      </div>
+
+      <div class="content-grid grid-3">
+        <div class="content-card">
+          <div class="card-icon">&#x1F32A;&#xFE0F;</div>
+          <h3>Before a Typhoon</h3>
+          <ul class="card-list">
+            <li>Stock water and non-perishable food for 3 days</li>
+            <li>Charge all devices and power banks</li>
+            <li>Bring in outdoor furniture and plants</li>
+            <li>Check evacuation zone map</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <div class="card-icon">&#x26A0;&#xFE0F;</div>
+          <h3>During a Typhoon</h3>
+          <ul class="card-list">
+            <li>Stay indoors and away from windows</li>
+            <li>Follow NHK World or Y! Disaster app for updates</li>
+            <li>Do not go outside unless absolutely necessary</li>
+            <li>If flooding occurs, move to higher floor</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <div class="card-icon">&#x2705;</div>
+          <h3>Emergency Kit</h3>
+          <ul class="card-list">
+            <li>Water (3L per person per day)</li>
+            <li>Non-perishable food + can opener</li>
+            <li>Flashlight + spare batteries</li>
+            <li>First aid kit + prescription meds</li>
+            <li>Portable charger for phone</li>
+            <li>Whistle (to signal for help)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Emergency Phrases -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-tag">Phrases</span>
+        <h2>Emergency Japanese Phrases</h2>
+        <p>Print or screenshot this card. Show it to someone if you need help.</p>
+      </div>
+
+      <div class="phrase-card">
+        <div class="phrase-card-header">Emergency Phrase Card</div>
+        <div class="phrase-grid">
+          <div class="phrase-row">
+            <span class="phrase-en">Call an ambulance</span>
+            <span class="phrase-ja">Kyukyusha o yonde kudasai</span>
+            <span class="phrase-pron">kyoo-kyoo-sha oh yohn-deh koo-dah-sigh</span>
+          </div>
+          <div class="phrase-row">
+            <span class="phrase-en">Call the police</span>
+            <span class="phrase-ja">Keisatsu o yonde kudasai</span>
+            <span class="phrase-pron">kay-sah-tsu oh yohn-deh koo-dah-sigh</span>
+          </div>
+          <div class="phrase-row">
+            <span class="phrase-en">I need a doctor</span>
+            <span class="phrase-ja">Isha ni aitai desu</span>
+            <span class="phrase-pron">ee-shah nee eye-tie dess</span>
+          </div>
+          <div class="phrase-row">
+            <span class="phrase-en">Where is the hospital?</span>
+            <span class="phrase-ja">Byoin wa doko desu ka?</span>
+            <span class="phrase-pron">byoh-een wah doh-koh dess kah</span>
+          </div>
+          <div class="phrase-row">
+            <span class="phrase-en">I'm lost</span>
+            <span class="phrase-ja">Michi ni mayotta</span>
+            <span class="phrase-pron">mee-chee nee my-yoh-tah</span>
+          </div>
+          <div class="phrase-row">
+            <span class="phrase-en">Help!</span>
+            <span class="phrase-ja">Tasukete!</span>
+            <span class="phrase-pron">tah-soo-keh-teh</span>
+          </div>
+          <div class="phrase-row">
+            <span class="phrase-en">I don't understand</span>
+            <span class="phrase-ja">Wakarimasen</span>
+            <span class="phrase-pron">wah-kah-ree-mah-sen</span>
+          </div>
+          <div class="phrase-row">
+            <span class="phrase-en">Do you speak English?</span>
+            <span class="phrase-ja">Eigo ga hanasemasu ka?</span>
+            <span class="phrase-pron">ay-goh gah hah-nah-seh-mahs kah</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Embassy & Lost -->
+    <section class="section section-alt">
+      <div class="section-header">
+        <span class="section-tag">Support</span>
+        <h2>Embassy Contacts &amp; Lost Items</h2>
+      </div>
+
+      <div class="content-grid">
+        <div class="content-card">
+          <div class="card-icon">&#x1F3F0;</div>
+          <h3>Embassies in Tokyo</h3>
+          <ul class="card-list">
+            <li><strong>USA:</strong> 03-3224-5000</li>
+            <li><strong>UK:</strong> 03-5211-1100</li>
+            <li><strong>Canada:</strong> 03-5412-6200</li>
+            <li><strong>Australia:</strong> 03-5232-4111</li>
+            <li><strong>India:</strong> 03-3262-2391</li>
+            <li><strong>China:</strong> 03-3403-3388</li>
+            <li><strong>South Korea:</strong> 03-3455-2601</li>
+          </ul>
+          <p class="card-meta">All embassies are in central Tokyo, 30&ndash;50 min from Chofu</p>
+        </div>
+        <div class="content-card">
+          <div class="card-icon">&#x1F6AB;</div>
+          <h3>Lost or Stolen Items</h3>
+          <ul class="card-list">
+            <li><strong>Lost passport:</strong> Go to your embassy immediately. They will issue an emergency travel document.</li>
+            <li><strong>Lost wallet:</strong> Cancel cards. Report to police (110). Check at koban (police box).</li>
+            <li><strong>Lost IC card:</strong> Report at station ticket office. Unused balance can be transferred.</li>
+            <li><strong>Lost phone:</strong> Contact your mobile provider to suspend the line.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PDFs -->
+    <section class="section">
+      <div class="resources emergency-resources">
+        <h3>Reference Documents</h3>
+        <div class="resource-list">
+          <a href="assets/pdfs/kyoten0512_2.pdf" target="_blank" class="resource-link">
+            <span class="resource-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" stroke="currentColor" stroke-width="1.5"/><path d="M12 2v4h4" stroke="currentColor" stroke-width="1.5"/></svg>
+            </span>
+            <div>
+              <strong>Evacuation Site Map</strong>
+              <span>PDF &middot; Emergency</span>
+            </div>
+          </a>
+          <a href="assets/pdfs/Medical Institutions Listed by the Tokyo Metropolitan Government.pdf" target="_blank" class="resource-link">
+            <span class="resource-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" stroke="currentColor" stroke-width="1.5"/><path d="M12 2v4h4" stroke="currentColor" stroke-width="1.5"/></svg>
+            </span>
+            <div>
+              <strong>Medical Institutions (Tokyo)</strong>
+              <span>PDF &middot; Official list</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="./">Home</a>
+        <a href="living.html">Living in Chofu</a>
+        <a href="campus-life.html">Campus Life</a>
+        <a href="emergency.html">Emergency</a>
+      </div>
+      <p class="footer-text">Designed for the UEC International Student Community</p>
+      <p class="footer-sub">University of Electro-Communications &middot; Chofu, Tokyo</p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 16V4M4 10l6-6 6 6"/></svg>
+  </button>
+
+  <div class="noise-overlay"></div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
