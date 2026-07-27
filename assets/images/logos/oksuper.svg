@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <rect width="200" height="80" rx="6" fill="#D4BFAB"/>
+  <text x="100" y="40" font-family="Arial, sans-serif" font-weight="bold" font-size="30" fill="#5C3A21" text-anchor="middle">OK</text>
+  <text x="100" y="60" font-family="Arial, sans-serif" font-weight="bold" font-size="16" fill="#5C3A21" text-anchor="middle">SUPER</text>
+</svg>

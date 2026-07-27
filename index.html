@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UEC International Student Guide</title>
+  <meta name="description" content="A comprehensive guide for new international students at the University of Electro-Communications (UEC), Chofu, Tokyo. Covers visa, arrival, first week, and student life." />
+  <meta property="og:title" content="UEC International Student Guide" />
+  <meta property="og:description" content="Practical guide for international students at UEC: visa, arrival, housing, daily life in Chofu, campus, and emergencies." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tarequejosh.github.io/UEC_campus_guideline/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/svg+xml" href="/UEC_campus_guideline/favicon.svg" />
+  <link rel="apple-touch-icon" href="/UEC_campus_guideline/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="image" href="/UEC_campus_guideline/assets/hero_natural.webp" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script type="module" crossorigin src="/UEC_campus_guideline/assets/main-mqaMRMbu.js"></script>
+  <link rel="stylesheet" crossorigin href="/UEC_campus_guideline/assets/main-PcFAhGkH.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- Navigation -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="./" class="nav-logo">UEC<span class="logo-accent">Guide</span></a>
+      <ul class="nav-links">
+        <li><a href="./" class="nav-link active">Home</a></li>
+        <li><a href="living.html" class="nav-link">Living</a></li>
+        <li><a href="campus-life.html" class="nav-link">Campus</a></li>
+        <li><a href="emergency.html" class="nav-link">Emergency</a></li>
+        <li>
+          <button class="nav-icon-btn" id="searchToggle" aria-label="Search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="nav-icon-btn" id="darkToggle" aria-label="Toggle dark mode">
+            <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </li>
+      </ul>
+      <button class="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Search Overlay -->
+  <div id="searchOverlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="Search guides">
+    <div class="search-container">
+      <input type="search" id="searchInput" class="search-input" placeholder="Search guides, locations, numbers..." autocomplete="off" />
+      <div id="searchResults" class="search-results" role="listbox"></div>
+      <p class="search-hint">Press <kbd>Esc</kbd> to close</p>
+    </div>
+  </div>
+
+  <!-- Emergency FAB -->
+  <button id="emergencyFab" class="emergency-fab" aria-label="Emergency numbers">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  </button>
+  <div id="emergencyPanel" class="emergency-panel" hidden>
+    <a href="tel:119" class="emergency-panel-item emergency-call">
+      <span class="ep-number">119</span>
+      <span class="ep-label">Ambulance / Fire</span>
+    </a>
+    <a href="tel:110" class="emergency-panel-item emergency-call">
+      <span class="ep-number">110</span>
+      <span class="ep-label">Police</span>
+    </a>
+    <a href="emergency.html" class="emergency-panel-item">
+      <span class="ep-label">Full Emergency Guide &rarr;</span>
+    </a>
+  </div>
+
+  <main id="main-content">
+    <!-- Hero -->
+    <header class="hero" id="top">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-badge">UEC International Student Guide</span>
+        <h1>A Smarter Start for Every International Student</h1>
+        <p>Practical information for international students at the University of Electro-Communications: visa, housing, daily life in Chofu, campus, and emergencies.</p>
+        <div class="hero-search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="search" id="heroSearch" placeholder="Find anything &mdash; SIM card, bank account, earthquake..." autocomplete="off" />
+        </div>
+        <div class="hero-quick-actions">
+          <a href="#first-week" class="btn btn-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>
+            First Week
+          </a>
+          <a href="living.html" class="btn btn-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Living
+          </a>
+          <a href="campus-life.html" class="btn btn-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>
+            Campus
+          </a>
+          <a href="emergency.html" class="btn btn-outline btn-emergency">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Emergency
+          </a>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </header>
+
+    <!-- Before Arrival -->
+    <section id="before-arrival" class="section">
+      <div class="section-header">
+        <span class="section-tag">Plan Ahead</span>
+        <h2>Before You Arrive</h2>
+        <p>What to prepare in the months before arriving in Japan.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="tl-month">3 months</span>
+          <strong>Apply for COE</strong>
+        </div>
+        <div class="timeline-arrow">&rarr;</div>
+        <div class="timeline-item">
+          <span class="tl-month">2 months</span>
+          <strong>Book Flights</strong>
+        </div>
+        <div class="timeline-arrow">&rarr;</div>
+        <div class="timeline-item">
+          <span class="tl-month">1 month</span>
+          <strong>Arrange Housing</strong>
+        </div>
+        <div class="timeline-arrow">&rarr;</div>
+        <div class="timeline-item">
+          <span class="tl-month">2 weeks</span>
+          <strong>Pack &amp; Prepare</strong>
+        </div>
+        <div class="timeline-arrow">&rarr;</div>
+        <div class="timeline-item">
+          <span class="tl-month">Arrival</span>
+          <strong>Welcome to Japan!</strong>
+        </div>
+      </div>
+
+      <div class="cards-grid">
+        <div class="info-card">
+          <div class="info-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>
+          </div>
+          <h3>Visa &amp; COE</h3>
+          <p>Your university will send a Certificate of Eligibility (COE) to your home address. Take it to the nearest Japanese embassy to apply for your student visa. Start 3 months before departure.</p>
+          <ul class="checklist">
+            <li><input type="checkbox" id="check-coe" /><label for="check-coe">Receive COE from UEC</label></li>
+            <li><input type="checkbox" id="check-visa-app" /><label for="check-visa-app">Apply for visa at embassy</label></li>
+            <li><input type="checkbox" id="check-visa-rec" /><label for="check-visa-rec">Receive visa (1-2 weeks)</label></li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>Flight &amp; Airport</h3>
+          <p>Book flights to Narita (NRT) or Haneda (HND). Haneda is closer to Chofu (30 min by car, 50 min by train). Narita is farther (2 hours) but has more international flights.</p>
+          <ul class="checklist">
+            <li><input type="checkbox" id="check-flight" /><label for="check-flight">Book arrival during daytime (10:00&ndash;16:00)</label></li>
+            <li><input type="checkbox" id="check-wifi" /><label for="check-wifi">Portable WiFi or SIM pre-ordered</label></li>
+            <li><input type="checkbox" id="check-cash" /><label for="check-cash">Carry 50,000&ndash;100,000 yen in cash</label></li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 17h20M6 17v-5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v5"/><circle cx="12" cy="9" r="2"/><path d="M8 17v-2h8v2"/></svg>
+          </div>
+          <h3>Airport &rarr; Chofu</h3>
+          <p><strong>From Haneda:</strong> Take Keikyu Line to Shinagawa, then Keio Line to Chofu (50 min, ~800 yen). Or take the Airport Limousine Bus to Chofu Station.</p>
+          <p><strong>From Narita:</strong> Take Narita Express to Shinjuku, then Keio Line to Chofu (2 hours, ~3,500 yen).</p>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          </div>
+          <h3>Packing Checklist</h3>
+          <p>Pack light &mdash; you can buy almost everything in Japan. Focus on documents, electronics, and items that are hard to find or expensive in Japan.</p>
+          <ul class="checklist">
+            <li><input type="checkbox" id="check-passport" /><label for="check-passport">Passport &amp; visa</label></li>
+            <li><input type="checkbox" id="check-res-card" /><label for="check-res-card">Residence card / My Number docs</label></li>
+            <li><input type="checkbox" id="check-admit" /><label for="check-admit">UEC admission letter</label></li>
+            <li><input type="checkbox" id="check-photos" /><label for="check-photos">Passport photos (4.5&times;3.5 cm)</label></li>
+            <li><input type="checkbox" id="check-meds" /><label for="check-meds">Prescription medications + doctor's note</label></li>
+            <li><input type="checkbox" id="check-stamp" /><label for="check-stamp">Personal Hanko stamp (inkan)</label></li>
+            <li><input type="checkbox" id="check-convert" /><label for="check-convert">Power adapters (Japan uses flat 2-pin)</label></li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><path d="M6 6h.01M6 18h.01"/></svg>
+          </div>
+          <h3>SIM Card &amp; Pocket WiFi</h3>
+          <p>Get a prepaid SIM or pocket WiFi before you arrive so you have internet immediately. Major providers: Mobal, Sakura Mobile, Japan Wireless.</p>
+          <p>You can also get a Japanese SIM at Bic Camera or Yodobashi Camera near Chofu once you have your residence card.</p>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Accommodation</h3>
+          <p>UEC offers International House (IH) dormitories for new international students. Apply early as spaces are limited. Private apartments near Chofu Station cost 60,000&ndash;100,000 yen/month.</p>
+          <ul class="checklist">
+            <li><input type="checkbox" id="check-ih-app" /><label for="check-ih-app">Apply for International House dormitory</label></li>
+            <li><input type="checkbox" id="check-rent" /><label for="check-rent">Prepare 3+ months of rent for deposit</label></li>
+            <li><input type="checkbox" id="check-address" /><label for="check-address">Note your new address for registration</label></li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+          </div>
+          <h3>Essential Apps</h3>
+          <p>Install these before you arrive:</p>
+          <ul class="app-list">
+            <li><strong>Google Maps</strong> &mdash; navigation &amp; train times</li>
+            <li><strong>Google Translate</strong> &mdash; camera translation for menus &amp; signs</li>
+            <li><strong>LINE</strong> &mdash; messaging (everyone in Japan uses this)</li>
+            <li><strong>Japan Transit Planner</strong> &mdash; train routes</li>
+            <li><strong>NHK World</strong> &mdash; English news &amp; emergency alerts</li>
+            <li><strong>PayPay</strong> &mdash; mobile payments (get after arrival)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- First Week -->
+    <section id="first-week" class="section section-alt">
+      <div class="section-header">
+        <span class="section-tag">Getting Started</span>
+        <h2>Your First Week</h2>
+        <p>Step-by-step guide to your first 7 days at UEC &mdash; check off each task as you complete it.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <div class="step-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.94 0"/><path d="M12 20h.01"/></svg>
+          </div>
+          <h3>On-Campus Wi-Fi</h3>
+          <span class="tag tag-blue">UEC-Wireless</span>
+          <p>Access the UEC network using your student ID (e.g., x2410&hellip;). Visit the IT Center on the 4th floor of East-1 if you have password issues.</p>
+          <ul class="checklist">
+            <li><input type="checkbox" id="check-wifi1" /><label for="check-wifi1">Connect to UEC-Wireless</label></li>
+            <li><input type="checkbox" id="check-wifi2" /><label for="check-wifi2">Change default password</label></li>
+            <li><input type="checkbox" id="check-wifi3" /><label for="check-wifi3">Test eduroam for other campuses</label></li>
+          </ul>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <div class="step-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Address Registration</h3>
+          <span class="tag tag-purple">Chofu City Hall</span>
+          <p>Within 14 days of moving in, take your Residence Card and Passport to Chofu City Hall. It's a 5-minute walk south of Chofu Station.</p>
+          <ul class="checklist">
+            <li><input type="checkbox" id="check-addr1" /><label for="check-addr1">Locate Chofu City Hall on map</label></li>
+            <li><input type="checkbox" id="check-addr2" /><label for="check-addr2">Bring Residence Card + Passport</label></li>
+            <li><input type="checkbox" id="check-addr3" /><label for="check-addr3">Get your address printed on Residence Card</label></li>
+          </ul>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <div class="step-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3>Health Insurance &amp; Pension</h3>
+          <span class="tag tag-green">Mandatory</span>
+          <p>While at City Hall, sign up for National Health Insurance. Also apply for the Student National Pension Exemption to waive payments while studying.</p>
+          <ul class="checklist">
+            <li><input type="checkbox" id="check-nhi1" /><label for="check-nhi1">Enroll in National Health Insurance</label></li>
+            <li><input type="checkbox" id="check-nhi2" /><label for="check-nhi2">Apply for Student Pension Exemption</label></li>
+            <li><input type="checkbox" id="check-nhi3" /><label for="check-nhi3">Receive your health insurance card</label></li>
+          </ul>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">04</div>
+          <div class="step-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><path d="M6 6h.01M6 18h.01"/></svg>
+          </div>
+          <h3>JP Bank Account</h3>
+          <span class="tag tag-red">Finance</span>
+          <p>Open a Japan Post Bank account &mdash; the most international-student-friendly option. Bring your Residence Card, registered phone number, and Hanko stamp.</p>
+          <ul class="checklist">
+            <li><input type="checkbox" id="check-bank1" /><label for="check-bank1">Get a phone number first</label></li>
+            <li><input type="checkbox" id="check-bank2" /><label for="check-bank2">Visit Japan Post Bank with documents</label></li>
+            <li><input type="checkbox" id="check-bank3" /><label for="check-bank3">Receive bank book (tsuuchou) + cash card</label></li>
+          </ul>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">05</div>
+          <div class="step-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/></svg>
+          </div>
+          <h3>My Number</h3>
+          <span class="tag tag-purple">Identification</span>
+          <p>My Number is a 12-digit personal ID for taxes, healthcare, and social services. Notification will arrive by post at your registered address a few weeks after registration.</p>
+          <ul class="checklist">
+            <li><input type="checkbox" id="check-myNum1" /><label for="check-myNum1">Wait for My Number notification card</label></li>
+            <li><input type="checkbox" id="check-myNum2" /><label for="check-myNum2">Keep the card in a safe place</label></li>
+            <li><input type="checkbox" id="check-myNum3" /><label for="check-myNum3">Apply for official My Number card (optional)</label></li>
+          </ul>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">06</div>
+          <div class="step-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>
+          </div>
+          <h3>IC Card <span class="brand-badge-inline"><img src="/UEC_campus_guideline/assets/images/logos/pasmo.svg" alt="PASMO" height="18" loading="lazy" /><img src="/UEC_campus_guideline/assets/images/logos/suica.svg" alt="SUICA" height="18" loading="lazy" /></span></h3>
+          <span class="tag tag-blue">Transport</span>
+          <p>Get a PASMO or SUICA IC card at any train station ticket machine. Use it for trains, buses, convenience stores, and vending machines. Refundable deposit of 500 yen.</p>
+          <ul class="checklist">
+            <li><input type="checkbox" id="check-ic1" /><label for="check-ic1">Buy PASMO at Chofu Station</label></li>
+            <li><input type="checkbox" id="check-ic2" /><label for="check-ic2">Charge with 3,000&ndash;5,000 yen</label></li>
+            <li><input type="checkbox" id="check-ic3" /><label for="check-ic3">Register on your phone (Apple Wallet / Google Pay)</label></li>
+          </ul>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">07</div>
+          <div class="step-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
+          </div>
+          <h3>Visit International Student Office</h3>
+          <span class="tag tag-green">Important</span>
+          <p>Visit the International Student Office at UEC to introduce yourself, confirm your registration, ask about orientation events, and get information about support services.</p>
+          <ul class="checklist">
+            <li><input type="checkbox" id="check-intl1" /><label for="check-intl1">Find the International Student Office location</label></li>
+            <li><input type="checkbox" id="check-intl2" /><label for="check-intl2">Confirm orientation schedule</label></li>
+            <li><input type="checkbox" id="check-intl3" /><label for="check-intl3">Ask about student clubs and events</label></li>
+          </ul>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">08</div>
+          <div class="step-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81"/></svg>
+          </div>
+          <h3>Get a Japanese Phone Number</h3>
+          <span class="tag tag-red">Communication</span>
+          <p>Visit a mobile provider near Chofu Station. Major options: Rakuten Mobile (cheap, English app), IIJmio (budget), LINE MOBILE, or major carriers (docomo/au/SoftBank).</p>
+          <ul class="checklist">
+            <li><input type="checkbox" id="check-phone1" /><label for="check-phone1">Compare SIM plans online</label></li>
+            <li><input type="checkbox" id="check-phone2" /><label for="check-phone2">Visit store with Residence Card + bank info</label></li>
+            <li><input type="checkbox" id="check-phone3" /><label for="check-phone3">Activate SIM and test calls</label></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Gallery -->
+      <div class="section-subheader">
+        <h3>Campus Map &amp; Dorm Photos</h3>
+        <p>Click any image to view full size.</p>
+      </div>
+
+      <div class="gallery">
+        <div class="gallery-item" data-src="assets/images/day-one/campus-map.webp" data-caption="UEC Campus Map &mdash; navigate buildings and facilities">
+          <img src="assets/images/day-one/campus-map.webp" alt="UEC Campus Map" loading="lazy" />
+          <div class="gallery-label">Campus Map</div>
+        </div>
+        <div class="gallery-item" data-src="assets/images/day-one/international-house-lobby.webp" data-caption="International House Lobby &mdash; common area with free items for students">
+          <img src="assets/images/day-one/international-house-lobby.webp" alt="International House Lobby" loading="lazy" />
+          <div class="gallery-label">IH Lobby</div>
+        </div>
+        <div class="gallery-item" data-src="assets/images/day-one/international-dorm.webp" data-caption="International Dorm &mdash; shared lobby with free stuff to take">
+          <img src="assets/images/day-one/international-dorm.webp" alt="International Dorm" loading="lazy" />
+          <div class="gallery-label">International Dorm</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-tag">Explore More</span>
+        <h2>Quick Links</h2>
+        <p>Detailed guides for housing, shopping, campus, and emergencies.</p>
+      </div>
+
+      <div class="cards-grid">
+        <a href="living.html" class="info-card info-card-link">
+          <div class="info-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Living in Chofu</h3>
+          <p>Supermarkets, transport, garbage rules, internet setup, nearby places map &rarr;</p>
+        </a>
+        <a href="campus-life.html" class="info-card info-card-link">
+          <div class="info-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>
+          </div>
+          <h3>Campus Life</h3>
+          <p>Food, dining, clubs, sports, health center, career resources &rarr;</p>
+        </a>
+        <a href="emergency.html" class="info-card info-card-link">
+          <div class="info-card-icon" style="color:var(--red)">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3>Emergency Guide</h3>
+          <p>Emergency numbers, earthquake safety, clinics, embassy contacts &rarr;</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="./">Home</a>
+        <a href="living.html">Living in Chofu</a>
+        <a href="campus-life.html">Campus Life</a>
+        <a href="emergency.html">Emergency</a>
+      </div>
+      <p class="footer-text">Designed for the UEC International Student Community</p>
+      <p class="footer-sub">University of Electro-Communications &middot; Chofu, Tokyo</p>
+      <p class="footer-sub">Found an issue? <a href="https://github.com/tarequejosh/UEC_campus_guideline/issues" target="_blank" rel="noopener">Report it here</a></p>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="" />
+      <p id="lightbox-caption"></p>
+    </div>
+    <button class="lightbox-prev" aria-label="Previous image">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="lightbox-next" aria-label="Next image">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+  </div>
+
+  <!-- Back to top -->
+  <button id="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 16V4M4 10l6-6 6 6"/></svg>
+  </button>
+
+  <!-- Noise overlay -->
+  <div class="noise-overlay"></div>
+
+</body>
+</html>
