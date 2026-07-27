@@ -443,13 +443,13 @@ h1, h2, h3, h4, h5 {
 }
 
 .nav-logo-img {
-  display: block;
-  height: 38px;
-  width: auto;
-  padding: 0.35rem 0.7rem;
-  background: #1a3a5c;
-  border-radius: var(--radius-sm);
-}
+    display: block;
+    height: 38px;
+    width: auto;
+    padding: 0.35rem 0.7rem;
+    background: #2563EB;
+    border-radius: var(--radius-sm);
+  }
 
 .nav-links {
   display: flex;
@@ -571,16 +571,16 @@ h1, h2, h3, h4, h5 {
 }
 
 .hero-badge {
-  display: inline-block;
-  padding: 0.4rem 1rem;
-  border-radius: var(--radius-full);
-  background: var(--accent-light);
-  color: var(--accent);
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  margin-bottom: 1.5rem;
-}
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-full);
+    background: #2563EB;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.5rem;
+  }
 
 .hero-content h1 {
   font-size: clamp(3rem, 7vw, 5.5rem);

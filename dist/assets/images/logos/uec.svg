@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 70">
   <defs>
-    <style>.uec-w{fill:#fff}.uec-b{fill:#2563EB}.uec-g{fill:url(#uec-grad)}</style>
+    <style>.uec-w{fill:#fff}.uec-b{fill:#54c2f0}.uec-g{fill:url(#uec-grad)}</style>
     <radialGradient id="uec-grad" cx="70.49" cy="50.24" r="3.19" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#fff"/>
       <stop offset="1" stop-color="#7871b2"/>
