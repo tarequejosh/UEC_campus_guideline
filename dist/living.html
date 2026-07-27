@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Living in Chofu — UEC Survival Guide</title>
+  <meta name="description" content="Guide to living in Chofu, Tokyo for UEC international students: supermarkets, transport, garbage rules, internet, and interactive map." />
+  <link rel="icon" type="image/svg+xml" href="/UEC_campus_guideline/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://unpkg.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script type="module" crossorigin src="/UEC_campus_guideline/assets/main-BRq3KaW_.js"></script>
+  <link rel="stylesheet" crossorigin href="/UEC_campus_guideline/assets/main-CPV1m0i5.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- Navigation -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="./" class="nav-logo"><img src="assets/images/logos/uec.svg" alt="UEC" class="nav-logo-img" /></a>
+      <ul class="nav-links">
+        <li><a href="./" class="nav-link">Home</a></li>
+        <li><a href="living.html" class="nav-link active">Living</a></li>
+        <li><a href="campus-life.html" class="nav-link">Campus</a></li>
+        <li><a href="emergency.html" class="nav-link">Emergency</a></li>
+        <li>
+          <button class="nav-icon-btn" id="searchToggle" aria-label="Search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="nav-icon-btn" id="darkToggle" aria-label="Toggle dark mode">
+            <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </li>
+      </ul>
+      <button class="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Search Overlay -->
+  <div id="searchOverlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="Search guides">
+    <div class="search-container">
+      <input type="search" id="searchInput" class="search-input" placeholder="Search guides, locations, numbers..." autocomplete="off" />
+      <div id="searchResults" class="search-results" role="listbox"></div>
+      <p class="search-hint">Press <kbd>Esc</kbd> to close</p>
+    </div>
+  </div>
+
+  <!-- Emergency FAB -->
+  <button id="emergencyFab" class="emergency-fab" aria-label="Emergency numbers">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81"/></svg>
+  </button>
+  <div id="emergencyPanel" class="emergency-panel" hidden>
+    <a href="tel:119" class="emergency-panel-item emergency-call">
+      <span class="ep-number">119</span>
+      <span class="ep-label">Ambulance / Fire</span>
+    </a>
+    <a href="tel:110" class="emergency-panel-item emergency-call">
+      <span class="ep-number">110</span>
+      <span class="ep-label">Police</span>
+    </a>
+    <a href="emergency.html" class="emergency-panel-item">
+      <span class="ep-label">Full Emergency Guide &rarr;</span>
+    </a>
+  </div>
+
+  <main id="main-content">
+    <!-- Page Hero -->
+    <header class="page-hero">
+      <div class="page-hero-content">
+        <span class="section-tag">Daily Life</span>
+        <h1>Living in Chofu</h1>
+        <p>Daily life in Chofu: grocery shopping, garbage sorting, and everything in between.</p>
+      </div>
+    </header>
+
+    <!-- Getting Around -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-tag">Transport</span>
+        <h2>Getting Around</h2>
+      </div>
+
+      <div class="content-grid grid-3">
+        <div class="content-card">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>
+          </div>
+          <h3>Keio Line <span class="brand-badge-inline"><img src="/UEC_campus_guideline/assets/images/logos/keio.svg" alt="Keio" height="14" loading="lazy" /></span></h3>
+          <p>Chofu Station is on the Keio Line. Direct trains to Shinjuku (20 min, express). Also connects to Kichijoji, Meiji-jingumae, and Shinjuku Sanchome.</p>
+          <p class="card-meta">~300 yen to Shinjuku &middot; IC card accepted</p>
+        </div>
+        <div class="content-card">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3>Buses</h3>
+          <p>Chofu City runs local buses connecting residential areas to the station. Use Google Maps for routes. The &quot;Chofu City Mini Bus&quot; covers key spots including UEC.</p>
+          <p class="card-meta">~200 yen per ride &middot; IC card accepted</p>
+        </div>
+        <div class="content-card">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>
+          </div>
+          <h3>Bicycles</h3>
+          <p>Bicycles are the most popular way to get around. You must register your bike with Chofu City (anti-theft law). Buy a used bike at Hard-Off for 5,000&ndash;10,000 yen.</p>
+          <p class="card-meta">Registration: ~500 yen &middot; Park in designated areas</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shopping -->
+    <section class="section section-alt">
+      <div class="section-header">
+        <span class="section-tag">Shopping</span>
+        <h2>Supermarkets &amp; Essentials</h2>
+        <p>Where to buy food, household items, and more near UEC.</p>
+      </div>
+
+      <div class="brands-grid">
+        <a href="https://www.google.com/maps/search/?api=1&query=Seiyu+Chofu+Tokyo" target="_blank" class="brand-card">
+          <span class="brand-logo" style="background:#fff"><img src="/UEC_campus_guideline/assets/images/logos/seiyu.svg" alt="Seiyu" loading="lazy" /></span>
+          <span class="brand-info">
+            <strong>Seiyu</strong>
+            <span>Supermarket &middot; Open 24/7</span>
+            <span class="brand-badges"><span class="badge badge-24h">24h</span><span class="badge badge-budget">Budget</span></span>
+          </span>
+          <span class="brand-arrow">&rarr;</span>
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=OK+Super+Chofu+Tokyo" target="_blank" class="brand-card">
+          <span class="brand-logo" style="background:#D4BFAB"><img src="/UEC_campus_guideline/assets/images/logos/oksuper.svg" alt="OK Super" loading="lazy" /></span>
+          <span class="brand-info">
+            <strong>OK Super</strong>
+            <span>Supermarket &middot; Budget groceries</span>
+            <span class="brand-badges"><span class="badge badge-budget">Budget</span><span class="badge badge-produce">Fresh Produce</span></span>
+          </span>
+          <span class="brand-arrow">&rarr;</span>
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Gyomu+Super+Chofu+Tokyo" target="_blank" class="brand-card">
+          <span class="brand-logo" style="background:#fff"><img src="/UEC_campus_guideline/assets/images/logos/gyomu.svg" alt="Gyomu Super" loading="lazy" /></span>
+          <span class="brand-info">
+            <strong>Gyomu Super</strong>
+            <span>Wholesale Grocery &middot; Bulk &amp; imported</span>
+            <span class="brand-badges"><span class="badge badge-halal">Halal</span><span class="badge badge-bulk">Bulk</span></span>
+          </span>
+          <span class="brand-arrow">&rarr;</span>
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=7-Eleven+International+House+Chofu" target="_blank" class="brand-card">
+          <span class="brand-logo" style="background:#008061"><img src="/UEC_campus_guideline/assets/images/logos/7eleven.svg" alt="7-Eleven" loading="lazy" /></span>
+          <span class="brand-info">
+            <strong>7-Eleven (IH)</strong>
+            <span>Convenience Store &middot; Near International House</span>
+            <span class="brand-badges"><span class="badge badge-24h">24h</span><span class="badge badge-atm">ATM</span></span>
+          </span>
+          <span class="brand-arrow">&rarr;</span>
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Don+Quijote+Chofu+Tokyo" target="_blank" class="brand-card">
+          <span class="brand-logo" style="background:#003DA5"><img src="/UEC_campus_guideline/assets/images/logos/donqui.svg" alt="Don Quijote" loading="lazy" /></span>
+          <span class="brand-info">
+            <strong>Don Quijote</strong>
+            <span>Discount Store &middot; Everything in one place</span>
+            <span class="brand-badges"><span class="badge badge-24h">24h</span><span class="badge badge-discount">Discount</span></span>
+          </span>
+          <span class="brand-arrow">&rarr;</span>
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=PARCO+Chofu+Tokyo" target="_blank" class="brand-card">
+          <span class="brand-logo" style="background:#fff"><img src="/UEC_campus_guideline/assets/images/logos/parco.svg" alt="PARCO" loading="lazy" /></span>
+          <span class="brand-info">
+            <strong>PARCO Chofu</strong>
+            <span>Shopping Mall &middot; 10:00&ndash;21:00</span>
+            <span class="brand-badges"><span class="badge badge-mall">Mall</span><span class="badge badge-daiso">Daiso</span></span>
+          </span>
+          <span class="brand-arrow">&rarr;</span>
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Daiso+PARCO+Chofu" target="_blank" class="brand-card">
+          <span class="brand-logo" style="background:#8B5E3C"><img src="/UEC_campus_guideline/assets/images/logos/daiso.svg" alt="Daiso" loading="lazy" /></span>
+          <span class="brand-info">
+            <strong>Daiso (PARCO)</strong>
+            <span>100-Yen Shop &middot; Everything 100&yen;</span>
+            <span class="brand-badges"><span class="badge badge-budget">Budget</span></span>
+          </span>
+          <span class="brand-arrow">&rarr;</span>
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Kaldi+Coffee+PARCO+Chofu" target="_blank" class="brand-card">
+          <span class="brand-logo" style="background:#5C3A21"><img src="/UEC_campus_guideline/assets/images/logos/kaldi.svg" alt="Kaldi" loading="lazy" /></span>
+          <span class="brand-info">
+            <strong>Kaldi (PARCO)</strong>
+            <span>International Foods &middot; Imported ingredients</span>
+            <span class="brand-badges"><span class="badge badge-import">Imported</span></span>
+          </span>
+          <span class="brand-arrow">&rarr;</span>
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=GIGO+Chofu+Tokyo" target="_blank" class="brand-card">
+          <span class="brand-logo" style="background:#3d2514">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M6 12h4l2 3 2-6 2 3h4"/><path d="M4 17V7a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H6a2 2 0 01-2-2z"/></svg>
+          </span>
+          <span class="brand-info">
+            <strong>GIGO Chofu</strong>
+            <span>Arcade &middot; Games &amp; prizes</span>
+            <span class="brand-badges"><span class="badge badge-entertainment">Fun</span></span>
+          </span>
+          <span class="brand-arrow">&rarr;</span>
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=AEON+Cinema+Chofu+Tokyo" target="_blank" class="brand-card">
+          <span class="brand-logo" style="background:#5C3A21">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="3"/><circle cx="12" cy="12" r="3"/><path d="M2 8h20M8 2v4M16 2v4"/></svg>
+          </span>
+          <span class="brand-info">
+            <strong>&AElig;ON Cinema</strong>
+            <span>Movie Theater &middot; Student discounts</span>
+            <span class="brand-badges"><span class="badge badge-entertainment">Cinema</span></span>
+          </span>
+          <span class="brand-arrow">&rarr;</span>
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Jindai-ji+Temple+Chofu+Tokyo" target="_blank" class="brand-card">
+          <span class="brand-logo" style="background:#5C3A21">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4BFAB" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </span>
+          <span class="brand-info">
+            <strong>Jindai-ji Temple</strong>
+            <span>Historic Temple &middot; Beautiful gardens</span>
+            <span class="brand-badges"><span class="badge badge-culture">Culture</span></span>
+          </span>
+          <span class="brand-arrow">&rarr;</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Interactive Map -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-tag">Explore</span>
+        <h2>Interactive Map</h2>
+        <p>Click markers to explore key locations around UEC and Chofu.</p>
+      </div>
+
+      <div class="map-filters">
+        <button class="btn-filter active" data-filter="all">All</button>
+        <button class="btn-filter" data-filter="campus">Campus</button>
+        <button class="btn-filter" data-filter="food">Food</button>
+        <button class="btn-filter" data-filter="living">Living</button>
+        <button class="btn-filter" data-filter="entertainment">Entertainment</button>
+      </div>
+
+      <div id="map-render" class="map-container"></div>
+    </section>
+
+    <!-- Daily Life -->
+    <section class="section section-alt">
+      <div class="section-header">
+        <span class="section-tag">Daily Life</span>
+        <h2>Everyday Essentials</h2>
+      </div>
+
+      <div class="content-grid grid-3">
+        <div class="content-card">
+          <div class="card-icon">&#x267B;&#xFE0F;</div>
+          <h3>Garbage Disposal</h3>
+          <p>Chofu requires designated bags. Buy them at convenience stores or supermarkets:</p>
+          <ul class="card-list">
+            <li><strong>Red:</strong> Burnable waste (kitchen scraps, paper)</li>
+            <li><strong>Blue:</strong> Non-burnable (plastics, metals)</li>
+            <li><strong>Transparent:</strong> Recyclable plastics</li>
+          </ul>
+          <p class="card-meta">Pickup schedule varies by area. Check your building's notice board.</p>
+        </div>
+        <div class="content-card">
+          <div class="card-icon">&#x1F4E6;</div>
+          <h3>Mail &amp; Packages</h3>
+          <p>Your mailbox will have your name in Japanese. For Amazon packages, use the delivery box or receive at your door. If not home, a delivery slip (fusen) will tell you where to pick up.</p>
+          <p class="card-meta">Amazon Japan delivers to Chofu in 1&ndash;2 days</p>
+        </div>
+        <div class="content-card">
+          <div class="card-icon">&#x1F4F6;</div>
+          <h3>Internet Setup</h3>
+          <p>UEC provides campus-wide Wi-Fi (UEC-Wireless). For your dorm/apartment, you'll need to sign up with an ISP. Popular options: NURO, AsahiNet, or pocket WiFi via Rakuten Mobile.</p>
+          <p class="card-meta">Setup takes 1&ndash;3 weeks &middot; Start early</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-tag">Photos</span>
+        <h2>Explore Chofu</h2>
+      </div>
+
+      <div class="gallery">
+        <div class="gallery-item" data-src="assets/images/living/chofu-station.webp" data-caption="Chofu Station &mdash; the main transit hub">
+          <img src="assets/images/living/chofu-station.webp" alt="Chofu Station" loading="lazy" />
+          <div class="gallery-label">Chofu Station</div>
+        </div>
+        <div class="gallery-item" data-src="assets/images/living/parco-chofu.webp" data-caption="PARCO Chofu &mdash; shopping mall">
+          <img src="assets/images/living/parco-chofu.webp" alt="PARCO Chofu" loading="lazy" />
+          <div class="gallery-label">PARCO</div>
+        </div>
+        <div class="gallery-item" data-src="assets/images/living/seiyu-donqui.webp" data-caption="Seiyu &amp; Don Quijote &mdash; 24-hour shopping">
+          <img src="assets/images/living/seiyu-donqui.webp" alt="Seiyu and Don Quijote" loading="lazy" />
+          <div class="gallery-label">Seiyu / Don Quijote</div>
+        </div>
+        <div class="gallery-item" data-src="assets/images/living/seiyu-donqui-2.webp" data-caption="Another view of Seiyu &amp; Don Quijote">
+          <img src="assets/images/living/seiyu-donqui-2.webp" alt="Seiyu and Don Quijote 2" loading="lazy" />
+          <div class="gallery-label">Seiyu / Don Quijote 2</div>
+        </div>
+        <div class="gallery-item" data-src="assets/images/living/7-11-ih.webp" data-caption="7-Eleven near International House">
+          <img src="assets/images/living/7-11-ih.webp" alt="7-Eleven near IH" loading="lazy" />
+          <div class="gallery-label">7-Eleven (IH)</div>
+        </div>
+        <div class="gallery-item" data-src="assets/images/living/gigo.webp" data-caption="GIGO &mdash; game arcade">
+          <img src="assets/images/living/gigo.webp" alt="GIGO" loading="lazy" />
+          <div class="gallery-label">GIGO</div>
+        </div>
+        <div class="gallery-item" data-src="assets/images/living/ok-super.webp" data-caption="OK Supermarket &mdash; budget grocery">
+          <img src="assets/images/living/ok-super.webp" alt="OK Supermarket" loading="lazy" />
+          <div class="gallery-label">OK Super</div>
+        </div>
+        <div class="gallery-item" data-src="assets/images/living/ih-trash-1.webp" data-caption="International House trash area &mdash; proper disposal">
+          <img src="assets/images/living/ih-trash-1.webp" alt="IH Trash area" loading="lazy" />
+          <div class="gallery-label">IH Trash Area</div>
+        </div>
+        <div class="gallery-item" data-src="assets/images/living/ih-trash-2.webp" data-caption="IH recycling bins">
+          <img src="assets/images/living/ih-trash-2.webp" alt="IH Recycling" loading="lazy" />
+          <div class="gallery-label">IH Recycling</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="./">Home</a>
+        <a href="living.html">Living in Chofu</a>
+        <a href="campus-life.html">Campus Life</a>
+        <a href="emergency.html">Emergency</a>
+      </div>
+      <p class="footer-text">Designed for the UEC International Student Community</p>
+      <p class="footer-sub">University of Electro-Communications &middot; Chofu, Tokyo</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="" />
+      <p id="lightbox-caption"></p>
+    </div>
+    <button class="lightbox-prev" aria-label="Previous image">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="lightbox-next" aria-label="Next image">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+  </div>
+
+  <button id="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 16V4M4 10l6-6 6 6"/></svg>
+  </button>
+
+  <div class="noise-overlay"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</body>
+</html>

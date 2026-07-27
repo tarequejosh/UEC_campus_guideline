@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <rect width="200" height="80" rx="6" fill="#fff" stroke="#C4A882" stroke-width="2"/>
+  <text x="100" y="42" font-family="Arial, sans-serif" font-weight="bold" font-size="26" fill="#8B5E3C" text-anchor="middle">西友</text>
+  <text x="100" y="60" font-family="Arial, sans-serif" font-size="12" fill="#A0764A" text-anchor="middle">SEIYU</text>
+</svg>

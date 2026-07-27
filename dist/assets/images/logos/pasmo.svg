@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <rect width="200" height="80" rx="8" fill="#fff" stroke="#E60012" stroke-width="3"/>
+  <text x="100" y="44" font-family="Arial,sans-serif" font-weight="900" font-size="30" fill="#E60012" text-anchor="middle" letter-spacing="2">PASMO</text>
+  <text x="100" y="62" font-family="Arial,sans-serif" font-weight="700" font-size="10" fill="#666" text-anchor="middle">IC CARD</text>
+</svg>
