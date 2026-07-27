@@ -1339,29 +1339,25 @@ h1, h2, h3, h4, h5 {
 .dark .badge-daiso, :root.dark .badge-daiso { color: #F87171; }
 
 /* --- Gallery --- */
+/* --- Gallery Cards --- */
 .gallery {
-  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
   margin: 2rem 0;
 }
 
 .gallery-item {
-  position: relative;
-  display: inline-block;
-  width: 280px;
-  height: 200px;
-  margin: 0.625rem;
-  vertical-align: top;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   overflow: hidden;
   cursor: pointer;
   border: 1px solid var(--gray-200);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  background: var(--gray-100);
-  line-height: 0;
+  background: var(--white);
 }
 
 .gallery-item:hover {
-  transform: scale(1.02);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-glass);
   border-color: var(--accent-light);
 }
@@ -1369,21 +1365,23 @@ h1, h2, h3, h4, h5 {
 .gallery-item img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
 .gallery-label {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 0.75rem 1rem;
-  background: linear-gradient(transparent, rgba(0,0,0,0.6));
-  color: var(--white);
+  padding: 1rem 1.25rem;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
+  color: var(--gray-800);
+  background: var(--white);
+  border-top: 1px solid var(--gray-100);
 }
 
 /* --- Lightbox --- */
