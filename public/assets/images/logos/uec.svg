@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <rect width="200" height="80" rx="6" fill="#8B5E3C"/>
+  <text x="16" y="42" font-family="Georgia, serif" font-weight="bold" font-size="16" fill="#fff">電気通信大学</text>
+  <text x="16" y="60" font-family="Arial, sans-serif" font-weight="bold" font-size="14" fill="#fff">UEC</text>
+  <text x="16" y="72" font-family="Arial, sans-serif" font-size="8" fill="#D4BFAB">University of Electro-Communications</text>
+</svg>

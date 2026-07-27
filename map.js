@@ -178,6 +178,8 @@ export function initMap() {
                     document.getElementById('modal-title').innerText = loc.name;
                     document.getElementById('modal-desc').innerText = loc.longDesc;
                     document.getElementById('modal-img').src = loc.image;
+                    const mapsLink = document.getElementById('modal-maps-link');
+                    mapsLink.href = 'https://maps.apple.com/?q=' + encodeURIComponent(loc.name + ' Chofu Tokyo');
                     document.getElementById('map-modal').style.display = 'flex';
                 });
 
