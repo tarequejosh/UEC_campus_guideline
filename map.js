@@ -165,6 +165,7 @@ export function initMap() {
     function renderMarkers(filterType) {
         markerGroup.clearLayers();
 
+        const formatFix = (path) => path.replace(/\.(jpe?g)$/i, '.webp');
         locations.forEach(loc => {
             if (filterType === 'all' || loc.category === filterType) {
                 const marker = L.marker([loc.lat, loc.lng]);
@@ -177,7 +178,7 @@ export function initMap() {
                 marker.on('click', () => {
                     document.getElementById('modal-title').innerText = loc.name;
                     document.getElementById('modal-desc').innerText = loc.longDesc;
-                    document.getElementById('modal-img').src = loc.image;
+                    document.getElementById('modal-img').src = formatFix(loc.image);
                     const mapsLink = document.getElementById('modal-maps-link');
                     mapsLink.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(loc.name + ' Chofu Tokyo');
                     document.getElementById('map-modal').style.display = 'flex';

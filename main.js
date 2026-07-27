@@ -1,4 +1,4 @@
-import { initMap } from './map.js';
+// map.js loaded dynamically on living.html only
 
 // ========================================
 // Dark Mode
@@ -204,14 +204,6 @@ document.querySelectorAll('.checklist input[type="checkbox"]').forEach(cb => {
 });
 
 // ========================================
-// Navbar Shadow
-// ========================================
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 20);
-}, { passive: true });
-
-// ========================================
 // Mobile Menu
 // ========================================
 document.querySelector('.nav-toggle')?.addEventListener('click', () => {
@@ -219,40 +211,63 @@ document.querySelector('.nav-toggle')?.addEventListener('click', () => {
 });
 
 // ========================================
-// Hero Parallax (home page only)
+// Unified Scroll Handler (RAF-backed)
 // ========================================
+const navbar = document.getElementById('navbar');
+const backToTop = document.getElementById('back-to-top');
 const heroBg = document.querySelector('.hero-bg');
-if (heroBg) {
-  window.addEventListener('scroll', () => {
-    const scrolled = window.scrollY;
-    if (scrolled < window.innerHeight) {
-      heroBg.style.transform = `translateY(${scrolled * 0.3}px) scale(${1 + scrolled * 0.0004})`;
-    }
-  }, { passive: true });
-}
+
+let ticking = false;
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    requestAnimationFrame(() => {
+      const y = window.scrollY;
+      navbar.classList.toggle('scrolled', y > 20);
+      backToTop?.classList.toggle('visible', y > 500);
+      if (heroBg && y < window.innerHeight) {
+        heroBg.style.transform = `translateY(${y * 0.3}px) scale(${1 + y * 0.0004})`;
+      }
+      ticking = false;
+    });
+    ticking = true;
+  }
+}, { passive: true });
 
 // ========================================
-// Cursor Glow
+// Cursor Glow (idle-aware, stops when mouse still)
 // ========================================
 const glow = document.getElementById('cursorGlow');
-let glowX = -250;
-let glowY = -250;
-let targetX = -250;
-let targetY = -250;
+let glowX = -250, glowY = -250;
+let targetX = -250, targetY = -250;
+let glowTimer = null;
+let glowRaf = null;
 
 if (glow && window.innerWidth > 768) {
+  const startGlow = () => {
+    if (glowRaf) return;
+    const animateGlow = () => {
+      glowX += (targetX - glowX) * 0.08;
+      glowY += (targetY - glowY) * 0.08;
+      glow.style.transform = `translate(${glowX - 250}px, ${glowY - 250}px)`;
+      glowRaf = requestAnimationFrame(animateGlow);
+    };
+    animateGlow();
+  };
+
+  const stopGlow = () => {
+    if (glowRaf) {
+      cancelAnimationFrame(glowRaf);
+      glowRaf = null;
+    }
+  };
+
   document.addEventListener('mousemove', e => {
     targetX = e.clientX;
     targetY = e.clientY;
-  });
-
-  const animateGlow = () => {
-    glowX += (targetX - glowX) * 0.08;
-    glowY += (targetY - glowY) * 0.08;
-    glow.style.transform = `translate(${glowX - 250}px, ${glowY - 250}px)`;
-    requestAnimationFrame(animateGlow);
-  };
-  animateGlow();
+    clearTimeout(glowTimer);
+    startGlow();
+    glowTimer = setTimeout(stopGlow, 2000);
+  }, { passive: true });
 }
 
 // ========================================
@@ -305,14 +320,6 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowRight') navigateLightbox(1);
 });
 
-// ========================================
-// Back to Top
-// ========================================
-const backToTop = document.getElementById('back-to-top');
-window.addEventListener('scroll', () => {
-  backToTop?.classList.toggle('visible', window.scrollY > 500);
-}, { passive: true });
-
 backToTop?.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
@@ -348,11 +355,18 @@ const revealElements = () => {
 // ========================================
 // Init
 // ========================================
+const scheduleIdle = (fn) => {
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(fn, { timeout: 500 });
+  } else {
+    setTimeout(fn, 1);
+  }
+};
+
 const onReady = () => {
-  revealElements();
-  // Only init map on living.html (where #map-render exists)
+  scheduleIdle(revealElements);
   if (document.getElementById('map-render')) {
-    initMap();
+    import('./map.js').then(m => m.initMap());
   }
 };
 
