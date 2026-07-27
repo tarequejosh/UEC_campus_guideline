@@ -6,7 +6,7 @@ A comprehensive student-friendly guide for new international students at the **U
 
 | Platform | URL |
 |----------|-----|
-| **GitLab Pages** | https://buzzard.fedu.uec.ac.jp/Ayano/Project_group1/ |
+| **GitLab Pages** | https://buzzard.fedu.uec.ac.jp/Ayano/Project_group1 (check CI pipeline status) |
 | GitHub Pages (mirror) | https://tarequejosh.github.io/UEC_campus_guideline/ |
 
 ## Pages
