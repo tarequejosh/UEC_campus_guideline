@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
@@ -21,6 +22,7 @@
         <li><a href="#day-one" class="nav-link">Day One</a></li>
         <li><a href="#food" class="nav-link">Food</a></li>
         <li><a href="#living" class="nav-link">Living</a></li>
+        <li><a href="#map" class="nav-link">Map</a></li>
         <li><a href="#emergency" class="nav-link">Emergency</a></li>
       </ul>
       <button class="nav-toggle" aria-label="Menu">
@@ -290,6 +292,35 @@
       </div>
     </div>
   </section>
+
+  <!-- Interactive Map -->
+  <section id="map" class="section">
+    <div class="section-header">
+      <span class="section-tag">Explore</span>
+      <h2>Interactive Campus Map</h2>
+      <p>Discover key locations around UEC and Chofu. Click markers for details.</p>
+    </div>
+
+    <div class="map-filters">
+      <button class="btn-filter active" data-filter="all">All</button>
+      <button class="btn-filter" data-filter="campus">Campus</button>
+      <button class="btn-filter" data-filter="food">Food</button>
+      <button class="btn-filter" data-filter="living">Living</button>
+      <button class="btn-filter" data-filter="entertainment">Entertainment</button>
+    </div>
+
+    <div id="map-render" class="map-container"></div>
+  </section>
+
+  <!-- Map Modal -->
+  <div id="map-modal" class="map-modal">
+    <div class="map-modal-content">
+      <span class="map-close">&times;</span>
+      <img id="modal-img" src="" alt="" />
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+    </div>
+  </div>
 
   <!-- Emergency -->
   <section id="emergency" class="section section-alt">
@@ -584,6 +615,7 @@
     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 16V4M4 10l6-6 6 6"/></svg>
   </button>
 
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script type="module" src="/main.js"></script>
 </body>
 </html>

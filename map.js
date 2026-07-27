@@ -18,7 +18,7 @@ export function initMap() {
             lng: 139.5435,
             shortDesc: "The 100-yen breakfast spot.",
             longDesc: "Highly competitive breakfast area. Look for color-coded dietary labels here.",
-            image: "public/assets/images/food/campus-cafeteria.jpg" 
+            image: "/assets/images/food/campus-cafeteria.jpg" 
         },
         {
             name: "7-Eleven International House",
@@ -27,7 +27,7 @@ export function initMap() {
             lng: 139.54289250457037,
             shortDesc: "7-Eleven convenience close to the International House.",
             longDesc: "Convenience store for snacks, drinks, and daily necessities. Open 24/7.",
-            image: "public/assets/images/living/7-11-ih.jpg"
+            image: "/assets/images/living/7-11-ih.jpg"
         },
         {
             name: "Chofu City Hall",
@@ -36,7 +36,7 @@ export function initMap() {
             lng: 139.54111435874373,
             shortDesc: "Address Registration & Insurance.",
             longDesc: "Mandatory visit within your first 14 days to register your address and apply for pension exemption.",
-            image: "public/assets/images/living/Chofu-CH.jpg"
+            image: "/assets/images/living/Chofu-CH.jpg"
         },
         {
             name: "Ok Super",
@@ -45,7 +45,7 @@ export function initMap() {
             lng: 139.54249611401696,
             shortDesc: "Affordable groceries and fresh produce.",
             longDesc: "Ok Super is a local supermarket offering a variety of groceries, fresh produce, and household items at reasonable prices.",
-            image: "public/assets/images/living/ok-super.jpg"
+            image: "/assets/images/living/ok-super.jpg"
         },
         {
             name: "International House",
@@ -54,7 +54,7 @@ export function initMap() {
             lng: 139.54414430785795,
             shortDesc: "Student accommodation with shared facilities.",
             longDesc: "International House is a student dormitory that offers shared facilities and a multicultural environment.",
-            image: "public/assets/images/day-one/international-dorm.jpg"
+            image: "/assets/images/day-one/international-dorm.jpg"
         },
         {
             name: "Chofu Station",
@@ -63,7 +63,7 @@ export function initMap() {
             lng: 139.54483352893322,
             shortDesc: "Local train station with easy access to the city.",
             longDesc: "Chofu Station is a convenient transportation hub connecting students to various parts of the city.",
-            image: "public/assets/images/living/chofu-station.jpg"
+            image: "/assets/images/living/chofu-station.jpg"
         },
         {
             name: "Chofu PARCO",
@@ -72,7 +72,7 @@ export function initMap() {
             lng: 139.5437101565297,
             shortDesc: "Shopping mall with various stores and restaurants.",
             longDesc: "Chofu PARCO is a modern shopping mall offering a wide range of retail stores and dining options.",
-            image: "public/assets/images/living/parco-chofu.jpg"
+            image: "/assets/images/living/parco-chofu.jpg"
         },
         {
             name: "Don Quijote Chofu",
@@ -81,7 +81,7 @@ export function initMap() {
             lng: 139.54413664773637,
             shortDesc: "Convenience store with a wide range of products.",
             longDesc: "Don Quijote Chofu is a popular convenience store offering various snacks, drinks, and daily necessities.",
-            image: "public/assets/images/living/seiyu-donqui-2.jpg"
+            image: "/assets/images/living/seiyu-donqui-2.jpg"
         },
         {
             name: "GIGO Chofu",
@@ -90,7 +90,7 @@ export function initMap() {
             lng: 139.54426467864934,
             shortDesc: "Entertainment complex with arcade games and claw machines.",
             longDesc: "GIGO Chofu is a popular entertainment complex featuring arcade games, claw machines, and other fun activities for students and locals.",
-            image: "public/assets/images/living/gigo.jpg"
+            image: "/assets/images/living/gigo.jpg"
         },
         {
             name: "ÆON Cinema THEATUS Chofu",
@@ -99,7 +99,7 @@ export function initMap() {
             lng: 139.5421475812725,
             shortDesc: "Modern cinema with comfortable seating.",
             longDesc: "ÆON Cinema THEATUS Chofu is a state-of-the-art cinema offering the latest movies in a comfortable and modern environment.",
-            image: "public/assets/images/living/AEON-Cin.jpg"
+            image: "/assets/images/living/AEON-Cin.jpg"
         },
         {
             name: "Health Care Center UEC",
@@ -108,7 +108,7 @@ export function initMap() {
             lng: 139.5437146905445,
             shortDesc: "On-campus health services for students.",
             longDesc: "The Health Care Center at UEC provides medical services, health consultations, and support for students' well-being.",
-            image: "public/assets/images/day-one/HCC-UEC.jpg"
+            image: "/assets/images/day-one/HCC-UEC.jpg"
         },
         {
             name: "Jonathan's Chofu",
@@ -117,7 +117,7 @@ export function initMap() {
             lng: 139.5444922462146,
             shortDesc: "Delicious food options for students.",
             longDesc: "Jonathan's Chofu offers a variety of tasty meals and snacks for students.",
-            image: "public/assets/images/food/restaurants-chofu.jpg"
+            image: "/assets/images/food/restaurants-chofu.jpg"
         },
         {
             name: "Shabuyo Chofu",
@@ -126,7 +126,7 @@ export function initMap() {
             lng: 139.54422760042326,
             shortDesc: "Shabu-shabu restaurant for a hot pot dining experience.",
             longDesc: "Shabuyo Chofu offers a delicious shabu-shabu dining experience for students.",
-            image: "public/assets/images/food/Shabuyo.jpeg"
+            image: "/assets/images/food/Shabuyo.jpeg"
         },
         {
             name: "Kura Sushi Chofu",
@@ -135,7 +135,7 @@ export function initMap() {
             lng: 139.54334869158635,
             shortDesc: "Sushi restaurant for a fresh and authentic dining experience.",
             longDesc: "Kura Sushi Chofu offers a variety of fresh sushi and traditional Japanese dishes for students.",
-            image: "public/assets/images/food/KuraSushi.webp"
+            image: "/assets/images/food/KuraSushi.webp"
         },
         {
             name: "Uta-Hiroba Chofu",
@@ -144,7 +144,7 @@ export function initMap() {
             lng: 139.5449956347159,
             shortDesc: "Karaoke spot for students to enjoy singing and socializing.",
             longDesc: "Uta-Hiroba Chofu is a popular karaoke venue where students can sing their hearts out and socialize with friends.",
-            image: "public/assets/images/living/Karaoke.jpeg"
+            image: "/assets/images/living/Karaoke.jpeg"
         },
         {
             name: "Jindai-ji Temple",
@@ -153,7 +153,7 @@ export function initMap() {
             lng: 139.55134055590506,
             shortDesc: "Historic temple with beautiful gardens and cultural significance.",
             longDesc: "Jindai-ji Temple is a historic temple known for its beautiful gardens and cultural significance, offering a serene escape for students and visitors.",
-            image: "public/assets/images/living/Jindaji.jpg"
+            image: "/assets/images/living/Jindaji.jpg"
         },
         
         

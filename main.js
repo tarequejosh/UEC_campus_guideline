@@ -1,3 +1,6 @@
+// --- Interactive Map ---
+import { initMap } from './map.js';
+
 // --- Smooth Nav Scroll ---
 document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', e => {
@@ -62,11 +65,16 @@ const revealElements = () => {
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 };
 
-// Delay reveal to let layout settle
-if (document.readyState === 'complete') {
+// Init map and reveal after load
+const onReady = () => {
   revealElements();
+  initMap();
+};
+
+if (document.readyState === 'complete') {
+  onReady();
 } else {
-  window.addEventListener('load', revealElements);
+  window.addEventListener('load', onReady);
 }
 
 // --- Lightbox with Prev/Next ---

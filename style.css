@@ -1336,6 +1336,120 @@ footer {
   margin-top: 0.3rem;
 }
 
+/* ========================================
+   Interactive Map
+   ======================================== */
+
+.map-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-filter {
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--gray-200);
+  background: var(--white);
+  color: var(--gray-600);
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-filter:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn-filter.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--white);
+}
+
+.map-container {
+  width: 100%;
+  height: 500px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Map Modal */
+.map-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.map-modal.active {
+  display: flex;
+}
+
+.map-modal-content {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  max-width: 500px;
+  width: 100%;
+  padding: 1.5rem;
+  position: relative;
+  text-align: center;
+}
+
+.map-modal-content img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1rem;
+}
+
+.map-modal-content h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.map-modal-content p {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+}
+
+.map-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--gray-500);
+  transition: color 0.2s;
+  background: none;
+  border: none;
+  line-height: 1;
+}
+
+.map-close:hover {
+  color: var(--gray-900);
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    height: 350px;
+  }
+  .map-modal-content img {
+    height: 180px;
+  }
+}
+
 /* --- Back to Top --- */
 #back-to-top {
   position: fixed;
