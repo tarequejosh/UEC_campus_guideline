@@ -6,8 +6,7 @@ A comprehensive student-friendly guide for new international students at the **U
 
 | Platform | URL |
 |----------|-----|
-| **GitLab Pages** | https://buzzard.fedu.uec.ac.jp/Ayano/Project_group1 (check CI pipeline status) |
-| GitHub Pages (mirror) | https://tarequejosh.github.io/UEC_campus_guideline/ |
+| **GitHub Pages** | https://tarequejosh.github.io/UEC_campus_guideline/ |
 
 ## Pages
 
@@ -47,17 +46,18 @@ npm run build    # outputs to dist/
 
 ## Deployment
 
-### GitLab Pages
+### GitHub Pages (current)
 
-The project includes a `.gitlab-ci.yml` for automated GitLab Pages deployment:
+```bash
+npm run build
+npx gh-pages -d dist
+```
 
-1. Push to the `redesign-overhaul` branch (or merge to `main`)
-2. The CI pipeline runs automatically
-3. Site is served at the Pages URL above
+The site is auto-deployed from the `gh-pages` branch.
 
 ### Manual
 
-Upload the `dist/` folder to any static host (Netlify, Vercel, GitHub Pages, etc.).
+Upload the `dist/` folder to any static host (Netlify, Vercel, etc.).
 
 ## Branch Strategy
 
