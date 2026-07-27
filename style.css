@@ -25,34 +25,35 @@
   --gray-800: #2D2A25;
   --gray-900: #1A1917;
 
-  --accent: #8B5E3C;
-  --accent-light: #E8DDD4;
-  --accent-dark: #5C3A21;
+  --accent: #2563EB;
+  --accent-light: #DBEAFE;
+  --accent-dark: #1D4ED8;
 
-  --brown-50: #F8F3EE;
-  --brown-100: #EEE2D6;
-  --brown-200: #D4BFAB;
-  --brown-300: #B89B7E;
-  --brown-400: #A0764A;
-  --brown-500: #8B5E3C;
-  --brown-600: #6D482F;
-  --brown-700: #5C3A21;
-  --brown-800: #3D2514;
-  --brown-900: #241207;
+  --blue-50: #EFF6FF;
+  --blue-100: #DBEAFE;
+  --blue-200: #BFDBFE;
+  --blue-300: #93C5FD;
+  --blue-400: #60A5FA;
+  --blue-500: #3B82F6;
+  --blue-600: #2563EB;
 
-  --gold: #C4A882;
-  --gold-light: #EDE3D4;
+  --gold: #64748B;
+  --gold-light: #F1F5F9;
 
-  --green: #6B8F5E;
-  --green-light: #EAF3E7;
-  --red: #B8543C;
-  --red-light: #F8E8E4;
-  --amber: #B8860B;
-  --amber-light: #FDF3D0;
-  --purple: #7C5E8A;
-  --purple-light: #EFE8F2;
-  --blue: #5B7E9E;
-  --blue-light: #E6EDF3;
+  --green: #16A34A;
+  --green-light: #F0FDF4;
+  --red: #DC2626;
+  --red-light: #FEF2F2;
+  --amber: #D97706;
+  --amber-light: #FFFBEB;
+  --purple: #7C3AED;
+  --purple-light: #F5F3FF;
+  --blue: #2563EB;
+  --blue-light: #DBEAFE;
+  --teal: #0D9488;
+  --teal-light: #F0FDFA;
+  --orange: #EA580C;
+  --orange-light: #FFF7ED;
   --teal: #6B8F7E;
   --teal-light: #E7F3EE;
   --orange: #C9763A;
@@ -96,25 +97,19 @@
   --gray-800: #e4e4e7;
   --gray-900: #f4f4f5;
 
-  --accent: #c4966a;
-  --accent-light: #2a1f18;
-  --accent-dark: #d4a67a;
+  --accent: #60A5FA;
+  --accent-light: #1E293B;
+  --accent-dark: #93C5FD;
 
-  --gold-light: #2a2218;
+  --gold-light: #1E293B;
 
-  --brown-50: #1f1a16;
-  --brown-100: #2a1f18;
-  --brown-200: #3d2619;
-  --brown-300: #5c3a21;
-  --brown-400: #7a4d2e;
-
-  --green-light: #142114;
-  --red-light: #2e1410;
-  --amber-light: #2a1f08;
-  --purple-light: #1a1421;
-  --blue-light: #121d2e;
-  --teal-light: #14211d;
-  --orange-light: #2a1a10;
+  --green-light: #052E16;
+  --red-light: #450A0A;
+  --amber-light: #451A03;
+  --purple-light: #1E1B4B;
+  --blue-light: #172554;
+  --teal-light: #042F2E;
+  --orange-light: #431407;
 
   --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
   --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
@@ -141,25 +136,19 @@
     --gray-800: #e4e4e7;
     --gray-900: #f4f4f5;
 
-    --accent: #c4966a;
-    --accent-light: #2a1f18;
-    --accent-dark: #d4a67a;
+    --accent: #60A5FA;
+    --accent-light: #1E293B;
+    --accent-dark: #93C5FD;
 
-    --gold-light: #2a2218;
+    --gold-light: #1E293B;
 
-    --brown-50: #1f1a16;
-    --brown-100: #2a1f18;
-    --brown-200: #3d2619;
-    --brown-300: #5c3a21;
-    --brown-400: #7a4d2e;
-
-    --green-light: #142114;
-    --red-light: #2e1410;
-    --amber-light: #2a1f08;
-    --purple-light: #1a1421;
-    --blue-light: #121d2e;
-    --teal-light: #14211d;
-    --orange-light: #2a1a10;
+    --green-light: #052E16;
+    --red-light: #450A0A;
+    --amber-light: #451A03;
+    --purple-light: #1E1B4B;
+    --blue-light: #172554;
+    --teal-light: #042F2E;
+    --orange-light: #431407;
 
     --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
     --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
@@ -272,7 +261,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .text-accent {
-  background: linear-gradient(135deg, var(--accent), #b8966a);
+  background: linear-gradient(135deg, var(--accent), var(--blue-400));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1016,6 +1005,17 @@ h1, h2, h3, h4, h5 {
 .step-card h3 {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
+}
+
+.brand-badge-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 4px;
+}
+.brand-badge-inline img {
+  vertical-align: middle;
+  border-radius: 2px;
 }
 
 .step-card p {
