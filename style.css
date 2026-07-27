@@ -850,8 +850,6 @@ h1, h2, h3, h4, h5 {
   max-width: var(--max-width);
   margin: 0 auto;
   position: relative;
-  content-visibility: auto;
-  contain-intrinsic-size: 400px;
 }
 
 .section-alt {
@@ -1342,10 +1340,16 @@ h1, h2, h3, h4, h5 {
 
 /* --- Gallery --- */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 1.25rem;
   margin: 2rem 0;
+  justify-content: center;
+}
+
+.gallery-item {
+  flex: 1 1 260px;
+  max-width: 360px;
 }
 
 .gallery-item {
